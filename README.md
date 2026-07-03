@@ -1,16 +1,45 @@
-# React + Vite
+# Ledgr — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React frontend for Ledgr, a double-entry financial ledger system.
 
-Currently, two official plugins are available:
+## 🔗 Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Live App:** https://ledger-frontend-gamma.vercel.app
+- **Backend API:** https://ledger-backend-3h87.onrender.com
+- **API Docs:** https://ledger-backend-3h87.onrender.com/api/docs
+- **Backend Repo:** https://github.com/Akhand-20/Ledger-backend
 
-## React Compiler
+## ⚡ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React, Vite, Tailwind CSS v4, Axios, React Router DOM, Lucide React
 
-## Expanding the ESLint configuration
+## 📱 Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Page | Description |
+|------|-------------|
+| `/login` | JWT cookie-based authentication |
+| `/register` | New user registration with email notification |
+| `/` | Dashboard — live balance, recent transactions, copy account ID |
+| `/send` | Send money by username search |
+| `/transactions` | Paginated transaction history with sent/received breakdown |
+
+## ✨ Features
+
+- **Username-based transfers** — search recipient by username, no raw IDs
+- **Live balance** — derived from ledger entries on every load
+- **Transaction history** — paginated table with sent/received indicators and status badges
+- **Auto account creation** — new users prompted to create account from dashboard
+- **Password show/hide toggle** on login and register
+- **Copy Account ID** button on dashboard
+- **Responsive layout** — works across screen sizes
+
+## 🚀 Local Setup
+
+```bash
+git clone https://github.com/Akhand-20/Ledger-frontend.git
+cd Ledger-frontend
+npm install
+npm run dev
+```
+
+> Make sure the backend is running on `http://localhost:3000` or update `src/api/axios.js` with your backend URL.
